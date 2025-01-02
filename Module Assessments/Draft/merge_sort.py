@@ -3,7 +3,7 @@ import random
 def merge(arr, left, mid, right):
     n1 = mid-left+1
     n2 = right - mid
-# Create temp array
+
     L = [0] * n1
     R = [0] * n2
 

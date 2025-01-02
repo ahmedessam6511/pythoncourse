@@ -16,12 +16,12 @@ def conv_degree_to_percentage(degree,total_degree):
 
 
 if __name__ == "__main__":
-    
+    print("h")
 
 
     # os.rename("text.txt", "r")
 
-    file = open("textt.txt", "r")
+    # file = open("textt.txt", "r")
     # data = file.read()
     # print(data)
     # print(len(data))
