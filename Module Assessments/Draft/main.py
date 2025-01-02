@@ -1,8 +1,29 @@
+from math import pi, pow
+def main():  
 
+    radius = 4.0  
 
+  
 
-if __name__== "__main__":
-    
-    arr = list(input("Enter"))
+    ## type your code below 
+    def calc_circle_area(r):
+        
+        area= pi*(pow(r,2))
 
-    print(arr)
+    ############ 
+
+        return area 
+
+  
+
+    # Example usage  
+
+    result = calc_circle_area(radius)  
+
+    print("The answer is:", result)  
+
+    return result  
+
+  
+
+main() 
