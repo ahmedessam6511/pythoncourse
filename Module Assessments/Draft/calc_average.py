@@ -3,4 +3,11 @@ def calc_avg(ls):
 
 if __name__ == "__main__":
     ls = [1,2,3,4,5]
-    print("Average = " , calc_avg(ls)) 
+    if len(ls) != 0:
+        try:
+            print("Average = " , calc_avg(ls)) 
+        except:
+            print("Error!!!")
+        
+    else:
+        print("List is empty!!")
