@@ -45,5 +45,7 @@ def main():
     database.display_all_students()
 
     print(database.calc_overall_avg_grade())
+
+    print(stu1.grades)
  
 main()
