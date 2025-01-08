@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HomePage</title>
+        <style>
+            table, td, th {
+                border : 1px solid black;
+            }
+        </style>
+
+        
+
+    </head>
+    <body>
+        <h1 style="color: blue; background-color: pink; font-size: 200%;">HomePage</h1>
+        <a href="homepage.html" dir="rtl">HomePage</a>
+        <br>
+        <a href="aboutus.html">About Us</a>
+        <br>
+        <a href="contactus.html">Contact Us</a>
+
+        <!-- Create table -->
+  
+        <table>
+            <caption>
+                HAUSE INFO
+            </caption>
+            <colgroup>
+                <col>
+                <col style="background-color: pink;">
+                <col>
+                <col>
+            
+            </colgroup>
+            <tr>
+                <th>Owner ID</th>
+                <th>Owner Name</th>
+                <th>Number of Residents in the House</th>
+                <th>House Type</th>
+                <th>Address</th>
+                <th colspan="2">Phone Number</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Hawa</td>
+                <td>6</td>
+                <td>Good</td>
+                <td>A5r elbelad</td>
+                <td>93208930</td>
+                <td>043840w</td>
+                <td>i2442</td>
+            </tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">Esam</td>
+                <td rowspan="2">7</td>
+                <td rowspan="2">Very Good</td>
+                <td rowspan="2">7@awl eldoor</td>
+                <td>01021271360</td>
+                <td>None</td>
+            <tr>
+                    <td>930289038230</td>
+
+
+            </tr>
+        </table>
+
+        <br>
+        <!--Form-->
+        <form>
+            <label>Username: </label>
+            <input type="text" name="firstname" value="Please enter your name">
+
+        </form>
+
+        <h2>What size of drink you like to order Radio?</h2>
+        <input  type = "radio" name="drink" value="small" >Small drink<br>
+        <input  type = "radio" name="drink" value="regular" >Regular drink<br>
+        <input  type = "radio" name="drink" value="large" >Large drink<br>
+        
+        <h2>What size of drink you like to order?</h2>
+        <input  type = "checkbox" name="drink" value="small" >Small drink<br>
+        <input  type = "checkbox" name="drink" value="regular" >Regular drink<br>
+        <input  type = "checkbox" name="drink" value="large" >Large drink<br>
+
+        <select name = "days" action = "/contactus.html">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <input  value="submit" type="submit">
+        </select>
+
+
+       
+    </body>
+</html>
