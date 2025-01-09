@@ -1,0 +1,15 @@
+
+.personalImg {
+    width: 100%;
+    border: 2px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+p, li{
+    color: lightgreen;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-style: italic;
+    border-style: dashed;
+}
