@@ -17,7 +17,7 @@ function calculateGPA(lst){
     }
     avg = sum/lst.length;
 
-    console.log(avg);
+    document.write(avg);
 
     // document.getElementById("E1").innerHTML = avg;
 
