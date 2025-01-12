@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body{
+            background-color: yellow;
+            color: black;
+        }
+
+        /* @media LogicalOperator MediaType and (MediaFeature LogicalOperator MediaFeature){ */
+
+        @media (max-width: 992px){
+            body{
+                background-color: red;
+                color: white;
+            }
+        }
+
+        @media (max-width: 600px){
+            body{
+                background-color: green;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Resize the browser window. When the height of this document is smaller than 200px or bigger than 400px, the font
+        colour is "red".</p>
+    
+</body>
+</html>
