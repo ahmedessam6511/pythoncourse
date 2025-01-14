@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Input Validation</title>
+</head>
+<body>
+
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" required></textarea><br><br>
+
+    <button type="submit" onclick="validateInputs()">Submit</button>
+  </form>
+
+  <script>
+    function validateInputs() {
+      let isValid = true;
+
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
+
+      if (nameInput.value === "") {
+        alert("Name is empty.");
+        isValid = false;
+      }
+
+      if (emailInput.value === "") {
+        alert("Email is empty.");
+        isValid = false;
+      }
+
+      if (messageInput.value === "") {
+        alert("Message is empty.");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+
+</body>
+</html>
