@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee Order Form</title>
+</head>
+<body>
+
+  <h1>Coffee Order</h1>
+
+  <form id="orderForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="coffeeType">Coffee Type:</label><br>
+    <select id="coffeeType" name="coffeeType" required>
+      <option value="espresso">Espresso</option>
+      <option value="latte">Latte</option>
+      <option value="cappuccino">Cappuccino</option>
+    </select><br><br>
+
+    <label for="size">Size:</label><br>
+    <select id="size" name="size" required>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select><br><br>
+
+    <label for="extras">Extras:</label><br>
+    <div>
+      <input type="checkbox" id="milk" name="extras[]" value="milk"> Milk<br>
+      <input type="checkbox" id="sugar" name="extras[]" value="sugar"> Sugar<br>
+      <input type="checkbox" id="syrup" name="extras[]" value="syrup"> Syrup<br>
+    </div><br><br>
+
+    <button type="button" onclick="placeOrder()">Place Order</button>
+  </form>
+
+  <div id="orderSummary" style="display:none;">
+    <h2>Order Summary</h2>
+    <p id="customerName"></p>
+    <p id="coffeeDetails"></p>
+    <p id="totalPrice"></p>
+  </div>
+
+  <script>
+    function placeOrder() {
+      const name = document.getElementById("name").value;
+      const coffeeType = document.getElementById("coffeeType").value;
+      const size = document.getElementById("size").value;
+      const extras = Array.from(document.querySelectorAll('input[name="extras[]"]:checked'))
+                         .map(checkbox => checkbox.value);
+
+      
+      const basePrices = {
+        "espresso": 2.00,
+        "latte": 3.50,
+        "cappuccino": 4.00,
+      };
+      const sizeModifiers = {
+        "small": 1.0,
+        "medium": 1.25,
+        "large": 1.50,
+      };
+      const extraPrices = {
+        "milk": 0.50,
+        "sugar": 0.25,
+        "syrup": 0.75,
+      };
+
+      let price = basePrices[coffeeType] * sizeModifiers[size];
+      extras.forEach(extra => price += extraPrices[extra]);
+
+
+      document.getElementById("customerName").textContent = `Customer Name: ${name}`;
+      document.getElementById("coffeeDetails").textContent = `Coffee Type: ${coffeeType}, Size: ${size}, Extras: ${extras.join(", ")}`;
+      document.getElementById("totalPrice").textContent = `Total Price: $${price.toFixed(2)}`;
+
+
+      document.getElementById("orderForm").style.display = "none";
+      document.getElementById("orderSummary").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
