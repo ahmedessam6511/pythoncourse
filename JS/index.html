@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    console.time('Timer'); 
+
+
+    $(".E1").text("Text changed");
+    $(".E2").html("<b>HTML changed</b>");
+    
+    $(".E3").val("Value changed");
+
+    $("#element_1").css("background", "yellow");
+    // $("p").css("font-size", "50px");
+    // $(".p1").hide();
+    // $(".p1").show();
+    // $("#panel").slideDown("slow");
+    // debugger
+    $("div").animate({left: '300'},"slow");
+    console.timeEnd('Timer');
+
+
+});
+
+</script>
+</head>
+<body>
+
+    <p class="E1">Change the text</p>
+    <p class="E2">Change the <b>HTML</b> element</p>
+
+    <p>Input: <input type="text" class="E3" value="Change the value"></p>
+
+    <p id="element_1">Select element by id</p>
+    <p>Select element by name</p>
+    <p class="p1">This is a paragraph</p>
+
+    <div id="panel">Hello world!</div>
+
+
+
+
+</body>
+</html>
